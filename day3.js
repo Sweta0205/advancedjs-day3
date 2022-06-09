@@ -9,7 +9,28 @@ window.onload = async function getResponse() {
 
     const products = APIresult
     let row = document.querySelector(".row")
-    for (let i = 0; i < products.length; i++) {
+    products.forEach((product) => {
+        row.innerHTML += `
+              <div class='col'> 
+                  <div class="card" style="width: 18rem;">
+                      <img src="${product.img}" class="card-img-top" alt="image not found">
+                      <div class="card-body">
+                      <p class="card-text"> ${product.asin} </p>
+
+                    <h5 class="card-title">${product.title}</h5>
+                          <p class="card-text"> ${product.price} </p>
+                          <p class="card-text"> ${product.category} </p>
+                          <button class="skip" type="button" onclick="Delete(event)" id="skip">skip</button>
+                          <button class="add" type="button" onclick="addClickFunction(event)" id="add">add to cart</button>
+
+
+
+                      </div>
+                  </div>
+              </div>
+              `
+    })
+    /*for (let i = 0; i < products.length; i++) {
         const singleProduct = products[i]
 
         row.innerHTML += `
@@ -22,15 +43,16 @@ window.onload = async function getResponse() {
                     <h5 class="card-title">${singleProduct.title}</h5>
                           <p class="card-text"> ${singleProduct.price} </p>
                           <p class="card-text"> ${singleProduct.category} </p>
-                          <button class="skip" type="button" id="skip">skip</button>
-                          <button class="add" type="button" id="add">add to cart</button>
+                          <button class="skip" type="button" onclick="Delete(event)" id="skip">skip</button>
+                          <button class="add" type="button" onclick="addClickFunction(event)" id="add">add to cart</button>
+
 
 
                       </div>
                   </div>
               </div>
               `
-    }
+    }*/
 }
 
 
