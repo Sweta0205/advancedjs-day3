@@ -1,0 +1,27 @@
+.skip
+{
+    display: inline-block;
+    background-color: blueviolet;
+
+}
+
+.add
+{
+    display: inline-block;
+    background-color: brown;
+}
+body
+{
+    background-color: lightcyan;
+}
+.cart-container
+{
+    border-style: dashed;
+    background-color: plum;
+}
+h2{
+    text-align: center;
+    background-color: purple;
+    color:white
+
+}
